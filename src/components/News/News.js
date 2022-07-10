@@ -3,9 +3,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   onGetNews,
-  onGetSources,
-  onSelectHeadline,
-  onAddFav,
 } from "../actions/actions";
 import Loading from "../Loading/Loading";
 import "./news.css";

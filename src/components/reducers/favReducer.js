@@ -16,6 +16,7 @@ function favReducer(state = { fav: [] }, action) {
           return { fav: [...state.fav, action.payload] };
         }
       }
+      break;
     case REMOVE_FAV:
       localStorage.setItem(
         "favNews",
