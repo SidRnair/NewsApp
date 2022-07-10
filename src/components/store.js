@@ -11,14 +11,14 @@ const initialState = {
   Source: { source: [] },
   News: { news: [], sourceName: "" },
   Headline: { headline: {} },
-  Fav: { fav: !fav ? [] : JSON.parse(fav) },
+  Fav: { fav: fav === "undefined" ? [] : JSON.parse(fav) },
 };
 
 const reducer = combineReducers({
   Source: sourceReducer,
   News: newsReducer,
   Headline: headlineReducer,
-  Fav: favReducer
+  Fav: favReducer,
 });
 
 const store = createStore(reducer, initialState, applyMiddleware(thunk));

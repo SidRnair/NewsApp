@@ -16,6 +16,8 @@ import {
   Stack,
   Button,
 } from "@mui/material";
+import Loading from "../Loading/Loading";
+import Error from "../Error/Error";
 
 function Sources() {
   const dispatch = useDispatch();
@@ -31,10 +33,11 @@ function Sources() {
   return (
     <>
       {loading ? (
-        <div>loading...</div>
+        <Loading />
       ) : error ? (
-        <div>error 404</div>
+        <Error />
       ) : (
+        // <div style={{ color: "white" }}>Something went wrong...</div>
         <div
           style={{
             backgroundColor: "#171717",

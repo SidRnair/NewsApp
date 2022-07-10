@@ -7,9 +7,11 @@ import {
   onSelectHeadline,
   onAddFav,
 } from "../actions/actions";
+import Loading from "../Loading/Loading";
 import "./news.css";
 import NewsCard from "./NewsCard";
 import NewsCardMobile from "./NewsCardMobile";
+import Error from "../Error/Error";
 
 function News() {
   const dispatch = useDispatch();
@@ -23,9 +25,10 @@ function News() {
   return (
     <>
       {loading ? (
-        <div>loading ...</div>
+        <Loading />
       ) : error ? (
-        <div>error 404</div>
+        <Error />
+        // <div style={{ color: "white" }}>error 404</div>
       ) : (
         <div style={{ height: "100%", width: "auto" }}>
           <Typography variant="h4" color="#DA0037" pt={2.5} pl={2}>
