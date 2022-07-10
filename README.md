@@ -119,6 +119,10 @@ This is the full folder tree of src folder.
 
     This file contains all the actions including the onces thet require to make api calls.
 
+- .env
+
+    This file contains the key and the links for the API calls. Any changes to the APIs or the key can be done here directly. This data will be accessed inside the actions using process.env which is readily available through react as default.
+
 ## Packages used:
 
 - Material UI library: @mui/material (theming library)
