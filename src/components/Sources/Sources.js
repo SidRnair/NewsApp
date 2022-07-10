@@ -94,7 +94,7 @@ function Sources() {
                 id="panel2a-header"
               >
                 <Typography color={"#DA0037"} variant="h6">
-                  Favourites
+                  Favourites {fav.length !== 0 ? `(${fav.length})` : null}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
