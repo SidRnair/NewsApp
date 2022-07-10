@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Sources from "./components/Sources/Sources";
+import NewsGrid from "./components/NewsGrid/NewsGrid";
+import News from "./components/News/News";
+import Headline from "./components/Headline/Headline";
+import "../src/components/scrollbar.css";
 
-function App() {
+export default function BasicTable() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NewsGrid source={<Sources />} news={<News />} headline={<Headline />} />
   );
 }
-
-export default App;
